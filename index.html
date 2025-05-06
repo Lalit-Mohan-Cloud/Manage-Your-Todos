@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
+<!-- 
+#define LDR_PIN A0          // LDR sensor connected to analog pin A0
+#define IR_PIN 7            // IR sensor output pin connected to digital pin 7
+#define ULTRASONIC_TRIG 9   // Ultrasonic module Trig pin connected to digital pin 9
+#define ULTRASONIC_ECHO 10  // Ultrasonic module Echo pin connected to digital pin 10
+#define LDR_LED 6           // LED to indicate LDR sensor output
+#define IR_LED 8            // LED to indicate IR sensor detection
+
+void setup() {
+  // Pin Modes
+  pinMode(LDR_PIN, INPUT);
+  pinMode(IR_PIN, INPUT);
+  pinMode(ULTRASONIC_TRIG, OUTPUT);
+  pinMode(ULTRASONIC_ECHO, INPUT);
+  pinMode(LDR_LED, OUTPUT);
+  pinMode(IR_LED, OUTPUT);
+
+  // Serial Monitor Initialization
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Reading and displaying LDR sensor value
+  int ldrValue = analogRead(LDR_PIN);
+  Serial.print("LDR Value: ");
+  Serial.println(ldrValue);
+
+  // Controlling LED based on LDR brightness
+  if (ldrValue < 500) { // Adjust threshold based on your environment
+    digitalWrite(LDR_LED, HIGH);
+    Serial.println("LDR: Bright environment detected.");
+  } else {
+    digitalWrite(LDR_LED, LOW);
+    Serial.println("LDR: Dark environment detected.");
+  }
+
+  // Reading and displaying IR sensor value
+   int irValue = digitalRead(IR_PIN);
+  if (irValue == HIGH) {
+    digitalWrite(IR_LED, HIGH);
+    Serial.println("IR Sensor: Object Detected");
+  } else {
+    digitalWrite(IR_LED, LOW);
+    Serial.println("IR Sensor: No Object Detected");
+  }
+
+  // Reading and displaying ultrasonic sensor distance
+  long duration, distance;
+  digitalWrite(ULTRASONIC_TRIG, LOW);
+  delayMicroseconds(2);
+  digitalWrite(ULTRASONIC_TRIG, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(ULTRASONIC_TRIG, LOW);
+
+  // Calculating distance
+  duration = pulseIn(ULTRASONIC_ECHO, HIGH);
+  distance = duration * 0.034 / 2; // Convert to cm
+  Serial.print("Ultrasonic Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  // Adding a delay for stable readings
+  delay(5000);
+  Serial.print("Other output");
+  Serial.print("--------------------------------------");
+} -->
+
+<!-- 
+
+#define LDR_PIN A0          // LDR sensor connected to analog pin A0
+#define IR_PIN 7            // IR sensor output pin connected to digital pin 7
+#define ULTRASONIC_TRIG 9   // Ultrasonic module Trig pin connected to digital pin 9
+#define ULTRASONIC_ECHO 10  // Ultrasonic module Echo pin connected to digital pin 10
+#define LDR_LED 6           // LED to indicate LDR sensor output
+#define IR_LED 8            // LED to indicate IR sensor detection
+
+void setup() {
+  // Pin Modes
+  pinMode(LDR_PIN, INPUT);
+  pinMode(IR_PIN, INPUT);
+  pinMode(ULTRASONIC_TRIG, OUTPUT);
+  pinMode(ULTRASONIC_ECHO, INPUT);
+  pinMode(LDR_LED, OUTPUT);
+  pinMode(IR_LED, OUTPUT);
+
+  // Serial Monitor Initialization
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Reading and displaying LDR sensor value
+  int ldrValue = analogRead(LDR_PIN);
+  Serial.print("LDR Value: ");
+  Serial.println(ldrValue);
+
+  // Controlling LED based on LDR brightness
+  if (ldrValue < 500) { // Adjust threshold based on your environment
+    digitalWrite(LDR_LED, HIGH);
+    Serial.println("LDR: Bright environment detected.");
+  } else {
+    digitalWrite(LDR_LED, LOW);
+    Serial.println("LDR: Dark environment detected.");
+  }
+
+  // Reading and displaying IR sensor value
+   int irValue = digitalRead(IR_PIN);
+  if (irValue == HIGH) {
+    digitalWrite(IR_LED, HIGH);
+    Serial.println("IR Sensor: No Object Detected");
+  } else {
+    digitalWrite(IR_LED, LOW);
+    Serial.println("IR Sensor: Object Detected");
+  }
+
+  // Reading and displaying ultrasonic sensor distance
+  long duration, distance;
+  digitalWrite(ULTRASONIC_TRIG, LOW);
+  delayMicroseconds(2);
+  digitalWrite(ULTRASONIC_TRIG, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(ULTRASONIC_TRIG, LOW);
+
+  // Calculating distance
+  duration = pulseIn(ULTRASONIC_ECHO, HIGH);
+  distance = duration * 0.034 / 2; // Convert to cm
+  Serial.print("Ultrasonic Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  // Adding a delay for stable readings
+  delay(5000);
+  Serial.print("Other output");
+  Serial.print("--------------------------------------");
+} -->
+
+
