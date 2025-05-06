@@ -23,6 +23,6 @@ This is a simple To-Do List app built using React.js that helps you manage your 
    - Create your Todos.
  
 ## 📸 Screenshot
- ![image alt]([https://github.com/Lalit-Mohan-Cloud/Manage-Your-Todos.git](https://github.com/Lalit-Mohan-Cloud/Manage-Your-Todos/blob/main/image.png?raw=true))
+ ![image alt](https://github.com/Lalit-Mohan-Cloud/Manage-Your-Todos/blob/main/image.png?raw=true)
 
  
